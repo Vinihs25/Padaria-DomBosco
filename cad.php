@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado do processo</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.Form.css">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    
-<header>
-    <h1>Resultado do processamento</h1>
-</header>
+   <header>
+     <h1>Cadastro de clientes | Empório Padaria</h1>
+   </header>
+   
+   <main class="text">
+        <?php
+           $nome = $_GET["nome"];
+           $sobrenome = $_GET["sobrenome"];
+           $telefone = $_GET["telefone"];
 
+               
+           echo "<p>É um prazer te conhecer, a Empório Padaria agradece $nome $sobrenome! Entraremos em contato com você!</p>";
+        ?>
 
-<main>
-    <?php 
-    $nome = $_GET["nome"];
-    $sobrenome = $_GET["sobrenome"];
-
-    echo "É um prazer te conhecer, $nome $sobrenome! a Padaria Dom Bosco Agradece o seu cadastro!"
-    ?>
-
-    <p>
-        <a href="javascrip:history.go(-1)">Voltar para a página anterior</a>
-    </p>
-</main>
-
+        <button class="text-js">
+        <a href="javascript:history.go(-1)">Voltar para página anterior</a>
+        </button>
+        
+   </main>
+  
 </body>
 </html>
-
-
 
